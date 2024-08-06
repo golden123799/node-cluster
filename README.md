@@ -22,3 +22,25 @@ First, install the necessary dependencies using pnpm:
 ```bash
 pnpm install
 ```
+
+## Scripts
+
+Start the Application <br>
+Without Clustering:
+
+```bash
+pnpm dev
+pnpm test # start test
+```
+
+With Clustering:
+
+```bash
+pnpm dev-cluster
+pnpm test # start test
+```
+
+## Expected Outcome
+
+- **Without Clustering**: The server will handle fewer requests per second compared to the clustered version, as it utilizes only a single CPU core.
+- **With Clustering**: The server should handle more requests per second and demonstrate better throughput, as it leverages multiple CPU cores.
