@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.ts",
-	"dev-cluster": "nodemon src/cluster.ts"
+	"dev-cluster": "nodemon src/cluster.ts",
+	"test": "loadtest -c 10 --rps 100 -n 100 http://localhost:3000/heavy"
   },
   "keywords": [],
   "author": "",
